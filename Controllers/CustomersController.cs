@@ -130,7 +130,7 @@ namespace FIT5032_Task2.Controllers
             return new ActionAsPdf(
                 "",
                 new { invoiceId = 1 })
-            { FileName = "Invoice.pdf" };
+            { FileName = "records.pdf" };
         }
     }
 }
