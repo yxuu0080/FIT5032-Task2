@@ -7,6 +7,7 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using FIT5032_Task2.Models;
+using Rotativa;
 
 namespace FIT5032_Task2.Controllers
 {
@@ -122,6 +123,14 @@ namespace FIT5032_Task2.Controllers
                 db.Dispose();
             }
             base.Dispose(disposing);
+        }
+
+        public ActionResult PrintInvoice()
+        {
+            return new ActionAsPdf(
+                "",
+                new { invoiceId = 1 })
+            { FileName = "Invoice.pdf" };
         }
     }
 }

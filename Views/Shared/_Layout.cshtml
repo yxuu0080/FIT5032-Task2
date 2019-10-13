@@ -23,8 +23,9 @@
                 <ul class="nav navbar-nav">
                     @if (User.Identity.IsAuthenticated)
                     {
-                    <li>@Html.ActionLink("Owners", "Index", "Owners")</li>
-                    <li>@Html.ActionLink("Customers", "Index", "Customers")</li>
+                        <li>@Html.ActionLink("Owners", "Index", "Owners")</li>
+                        <li>@Html.ActionLink("Customers", "Index", "Customers")</li>
+                        <li>@Html.ActionLink("Send Email", "Send_Email", "Home")</li>
                     }
                 </ul>
                 @Html.Partial("_LoginPartial")
